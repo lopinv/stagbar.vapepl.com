@@ -30,18 +30,38 @@
 <header class="site-head">
   <div class="wrap head-in">
     <a class="logo" href="/"><span class="logo-mark">V</span>Stagbar · VapePL</a>
-    <nav aria-label="Nawigacja główna">
-      <a href="/produkty/">Produkty</a>
-      <a href="/#modele">Modele</a>
-      <a href="/blog/">Blog</a>
-      <a href="/faq/">FAQ</a>
-      <a href="/o-stagbar/">O marce</a>
-    </nav>
+    <nav aria-label="Nawigacja główna" class="head-nav"><a href="/produkty/">Produkty</a><a href="/#modele">Modele</a><a href="/blog/">Blog</a><a href="/faq/">FAQ</a><a href="/o-stagbar/">O marce</a></nav>
     <a class="head-cta" href="https://vapepl.com/?utm_source=stagbar&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=header" target="_blank" rel="noopener">Kup na VapePL.COM →</a>
+    <button class="nav-toggle" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
+    </button>
   </div>
 </header>
-<div class="trust-bar wrap" role="note"><span>&#10003; Wysyłka z Polski — realizacja 24–48h</span><span>&#10003; 30 dni na zwrot</span><span>&#10003; Rabaty ilościowe do −20%</span><span>&#10003; Tylko dla osób 18+</span></div>
+<div class="nav-drawer" id="mobile-menu" hidden>
+  <div class="nav-drawer-backdrop" data-nav-close></div>
+  <div class="nav-drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="nav-drawer-head">
+      <span class="nav-drawer-title">Menu</span>
+      <button class="nav-drawer-close" type="button" aria-label="Zamknij menu" data-nav-close>×</button>
+    </div>
+    <nav class="nav-drawer-links" aria-label="Menu mobilne"><a href="/produkty/">Produkty</a><a href="/#modele">Modele</a><a href="/blog/">Blog</a><a href="/faq/">FAQ</a><a href="/o-stagbar/">O marce</a></nav>
+    <a class="btn-buy lg nav-drawer-cta" href="https://vapepl.com/?utm_source=stagbar&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=drawer" target="_blank" rel="noopener">Kup na VapePL.COM →</a>
+  </div>
+</div>
 <main class="wrap">
+<script>
+(function(){
+  var drawer=document.getElementById("mobile-menu");
+  var toggle=document.querySelector(".nav-toggle");
+  function open(){drawer.hidden=false;toggle.setAttribute("aria-expanded","true");document.body.classList.add("nav-open");}
+  function close(){drawer.hidden=true;toggle.setAttribute("aria-expanded","false");document.body.classList.remove("nav-open");}
+  toggle.addEventListener("click",function(){drawer.hidden?open():close();});
+  drawer.addEventListener("click",function(e){if(e.target.hasAttribute("data-nav-close"))close();});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!drawer.hidden)close();});
+  // 同页锚点跳转不会卸载页面，需显式关闭抽屉
+  drawer.querySelectorAll(".nav-drawer-links a").forEach(function(a){a.addEventListener("click",close);});
+})();
+</script>
 <section class="hero"><div class="hero-grid">
   <div class="hero-copy">
     <span class="kicker">Przewodnik marki · Stagbar</span>
@@ -90,7 +110,7 @@
       <span class="price">150 zł</span>
       <span class="price-old">180 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/stag-bar-6in1-180000-puffs/?utm_source=stagbar&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-stag-bar-6in1-180000-puffs-black-dragon-ice-blueberry-cherry-cranberry-blue-razz-ice-strawberry-grape-double-apple-lychee-hami-melon" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/stag-bar-6in1-180000-puffs/?utm_source=stagbar&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-stag-bar-6in1-180000-puffs-black-dragon-ice-blueberry-cherry-cranberry-blue-razz-ice-strawberry-grape-double-apple-lychee-hami-melon" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/stag-bar-6in1-180000-puffs-blue-razz-ice-blueberry-ice-mixed-berries-blueberry-sour-rasberry-ice-peach-berry-strawberry-kiwi/"><img src="/assets/img/a88e2462f5429060-480.webp" alt="STAG BAR 6IN1 180000 PUFFS — Blue Razz Ice &amp; Blueberry Ice &amp; Mixed Berries &amp; Blueberry Sour Rasberry Ice &amp; Peach Berry &amp; Strawberry Kiwi" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -101,7 +121,7 @@
       <span class="price">150 zł</span>
       <span class="price-old">180 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/stag-bar-6in1-180000-puffs/?utm_source=stagbar&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-stag-bar-6in1-180000-puffs-blue-razz-ice-blueberry-ice-mixed-berries-blueberry-sour-rasberry-ice-peach-berry-strawberry-kiwi" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/stag-bar-6in1-180000-puffs/?utm_source=stagbar&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-stag-bar-6in1-180000-puffs-blue-razz-ice-blueberry-ice-mixed-berries-blueberry-sour-rasberry-ice-peach-berry-strawberry-kiwi" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/stag-bar-6in1-180000-puffs-blueberry-ice-strawberry-ice-watermelon-ice-fizzy-cherry-juicy-peach-triple-banana/"><img src="/assets/img/a88e2462f5429060-480.webp" alt="STAG BAR 6IN1 180000 PUFFS — Blueberry Ice &amp; Strawberry Ice &amp; Watermelon Ice &amp; Fizzy Cherry &amp; Juicy Peach &amp; Triple Banana" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -112,7 +132,7 @@
       <span class="price">150 zł</span>
       <span class="price-old">180 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/stag-bar-6in1-180000-puffs/?utm_source=stagbar&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-stag-bar-6in1-180000-puffs-blueberry-ice-strawberry-ice-watermelon-ice-fizzy-cherry-juicy-peach-triple-banana" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/stag-bar-6in1-180000-puffs/?utm_source=stagbar&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-stag-bar-6in1-180000-puffs-blueberry-ice-strawberry-ice-watermelon-ice-fizzy-cherry-juicy-peach-triple-banana" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice cola fruit sweet">
   <a class="card-media" href="/produkt/stag-bar-6in1-180000-puffs-cherry-cola-lemon-lime-black-dragon-ice-red-bull-peach-berry-strawberry-raspberry-ice/"><img src="/assets/img/a88e2462f5429060-480.webp" alt="STAG BAR 6IN1 180000 PUFFS — Cherry Cola &amp; Lemon Lime &amp; Black Dragon Ice &amp; Red Bull &amp; Peach Berry &amp; Strawberry Raspberry Ice" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -123,7 +143,7 @@
       <span class="price">150 zł</span>
       <span class="price-old">180 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/stag-bar-6in1-180000-puffs/?utm_source=stagbar&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-stag-bar-6in1-180000-puffs-cherry-cola-lemon-lime-black-dragon-ice-red-bull-peach-berry-strawberry-raspberry-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/stag-bar-6in1-180000-puffs/?utm_source=stagbar&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-stag-bar-6in1-180000-puffs-cherry-cola-lemon-lime-black-dragon-ice-red-bull-peach-berry-strawberry-raspberry-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice cola fruit mint">
   <a class="card-media" href="/produkt/stag-bar-6in1-180000-puffs-cool-mint-cola-ice-coco-loco-watermelon-ice-cherry-cola-aloe-grape/"><img src="/assets/img/a88e2462f5429060-480.webp" alt="STAG BAR 6IN1 180000 PUFFS — Cool Mint &amp; Cola Ice &amp; Coco Loco &amp; Watermelon Ice &amp; Cherry Cola &amp; Aloe Grape" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -134,7 +154,7 @@
       <span class="price">150 zł</span>
       <span class="price-old">180 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/stag-bar-6in1-180000-puffs/?utm_source=stagbar&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-stag-bar-6in1-180000-puffs-cool-mint-cola-ice-coco-loco-watermelon-ice-cherry-cola-aloe-grape" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/stag-bar-6in1-180000-puffs/?utm_source=stagbar&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-stag-bar-6in1-180000-puffs-cool-mint-cola-ice-coco-loco-watermelon-ice-cherry-cola-aloe-grape" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="napoje" data-fam="fruit sweet">
   <a class="card-media" href="/produkt/stag-bar-6in1-180000-puffs-lemon-lime-strawberry-kiwi-dragon-fruit-banana-cherry-pineapple-papaya-coco-loco-sex-on-the-beach/"><img src="/assets/img/a88e2462f5429060-480.webp" alt="STAG BAR 6IN1 180000 PUFFS — Lemon Lime &amp; Strawberry Kiwi &amp; Dragon Fruit Banana Cherry &amp; Pineapple Papaya &amp; Coco Loco &amp; Sex On The Beach" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -145,7 +165,7 @@
       <span class="price">150 zł</span>
       <span class="price-old">180 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/stag-bar-6in1-180000-puffs/?utm_source=stagbar&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-stag-bar-6in1-180000-puffs-lemon-lime-strawberry-kiwi-dragon-fruit-banana-cherry-pineapple-papaya-coco-loco-sex-on-the-beach" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/stag-bar-6in1-180000-puffs/?utm_source=stagbar&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-stag-bar-6in1-180000-puffs-lemon-lime-strawberry-kiwi-dragon-fruit-banana-cherry-pineapple-papaya-coco-loco-sex-on-the-beach" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="napoje" data-fam="cola fruit sweet">
   <a class="card-media" href="/produkt/stag-bar-6in1-180000-puffs-love-66-strawberry-candy-strawberry-colada-mixed-berries-cherscake/"><img src="/assets/img/a88e2462f5429060-480.webp" alt="STAG BAR 6IN1 180000 PUFFS — Love 66 &amp; Strawberry Candy &amp; Strawberry Colada &amp; Mixed Berries &amp; Cherscake" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -156,7 +176,7 @@
       <span class="price">150 zł</span>
       <span class="price-old">180 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/stag-bar-6in1-180000-puffs/?utm_source=stagbar&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-stag-bar-6in1-180000-puffs-love-66-strawberry-candy-strawberry-colada-mixed-berries-cherscake" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/stag-bar-6in1-180000-puffs/?utm_source=stagbar&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-stag-bar-6in1-180000-puffs-love-66-strawberry-candy-strawberry-colada-mixed-berries-cherscake" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice cola fruit sweet">
   <a class="card-media" href="/produkt/stag-bar-6in1-180000-puffs-strawberry-ice-strawberry-kiwi-strawberry-banana-strawberry-watermelon-strawberry-colada-strawberry-candy/"><img src="/assets/img/a88e2462f5429060-480.webp" alt="STAG BAR 6IN1 180000 PUFFS — Strawberry Ice &amp; Strawberry Kiwi &amp; Strawberry Banana &amp; Strawberry Watermelon &amp; Strawberry Colada &amp; Strawberry Candy" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -167,7 +187,7 @@
       <span class="price">150 zł</span>
       <span class="price-old">180 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/stag-bar-6in1-180000-puffs/?utm_source=stagbar&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-stag-bar-6in1-180000-puffs-strawberry-ice-strawberry-kiwi-strawberry-banana-strawberry-watermelon-strawberry-colada-strawberry-candy" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/stag-bar-6in1-180000-puffs/?utm_source=stagbar&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-stag-bar-6in1-180000-puffs-strawberry-ice-strawberry-kiwi-strawberry-banana-strawberry-watermelon-strawberry-colada-strawberry-candy" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article></div>
 </section><div id="smaki" class="anchor"></div><section class="block" id="kat-ice-menthol" data-cat-sec="ice-menthol">
@@ -181,7 +201,7 @@
       <span class="price">150 zł</span>
       <span class="price-old">180 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/stag-bar-6in1-180000-puffs/?utm_source=stagbar&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-stag-bar-6in1-180000-puffs-black-dragon-ice-blueberry-cherry-cranberry-blue-razz-ice-strawberry-grape-double-apple-lychee-hami-melon" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/stag-bar-6in1-180000-puffs/?utm_source=stagbar&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-stag-bar-6in1-180000-puffs-black-dragon-ice-blueberry-cherry-cranberry-blue-razz-ice-strawberry-grape-double-apple-lychee-hami-melon" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/stag-bar-6in1-180000-puffs-blue-razz-ice-blueberry-ice-mixed-berries-blueberry-sour-rasberry-ice-peach-berry-strawberry-kiwi/"><img src="/assets/img/a88e2462f5429060-480.webp" alt="STAG BAR 6IN1 180000 PUFFS — Blue Razz Ice &amp; Blueberry Ice &amp; Mixed Berries &amp; Blueberry Sour Rasberry Ice &amp; Peach Berry &amp; Strawberry Kiwi" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -192,7 +212,7 @@
       <span class="price">150 zł</span>
       <span class="price-old">180 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/stag-bar-6in1-180000-puffs/?utm_source=stagbar&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-stag-bar-6in1-180000-puffs-blue-razz-ice-blueberry-ice-mixed-berries-blueberry-sour-rasberry-ice-peach-berry-strawberry-kiwi" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/stag-bar-6in1-180000-puffs/?utm_source=stagbar&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-stag-bar-6in1-180000-puffs-blue-razz-ice-blueberry-ice-mixed-berries-blueberry-sour-rasberry-ice-peach-berry-strawberry-kiwi" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/stag-bar-6in1-180000-puffs-blueberry-ice-strawberry-ice-watermelon-ice-fizzy-cherry-juicy-peach-triple-banana/"><img src="/assets/img/a88e2462f5429060-480.webp" alt="STAG BAR 6IN1 180000 PUFFS — Blueberry Ice &amp; Strawberry Ice &amp; Watermelon Ice &amp; Fizzy Cherry &amp; Juicy Peach &amp; Triple Banana" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -203,7 +223,7 @@
       <span class="price">150 zł</span>
       <span class="price-old">180 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/stag-bar-6in1-180000-puffs/?utm_source=stagbar&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-stag-bar-6in1-180000-puffs-blueberry-ice-strawberry-ice-watermelon-ice-fizzy-cherry-juicy-peach-triple-banana" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/stag-bar-6in1-180000-puffs/?utm_source=stagbar&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-stag-bar-6in1-180000-puffs-blueberry-ice-strawberry-ice-watermelon-ice-fizzy-cherry-juicy-peach-triple-banana" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice cola fruit sweet">
   <a class="card-media" href="/produkt/stag-bar-6in1-180000-puffs-cherry-cola-lemon-lime-black-dragon-ice-red-bull-peach-berry-strawberry-raspberry-ice/"><img src="/assets/img/a88e2462f5429060-480.webp" alt="STAG BAR 6IN1 180000 PUFFS — Cherry Cola &amp; Lemon Lime &amp; Black Dragon Ice &amp; Red Bull &amp; Peach Berry &amp; Strawberry Raspberry Ice" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -214,7 +234,7 @@
       <span class="price">150 zł</span>
       <span class="price-old">180 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/stag-bar-6in1-180000-puffs/?utm_source=stagbar&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-stag-bar-6in1-180000-puffs-cherry-cola-lemon-lime-black-dragon-ice-red-bull-peach-berry-strawberry-raspberry-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/stag-bar-6in1-180000-puffs/?utm_source=stagbar&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-stag-bar-6in1-180000-puffs-cherry-cola-lemon-lime-black-dragon-ice-red-bull-peach-berry-strawberry-raspberry-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice cola fruit mint">
   <a class="card-media" href="/produkt/stag-bar-6in1-180000-puffs-cool-mint-cola-ice-coco-loco-watermelon-ice-cherry-cola-aloe-grape/"><img src="/assets/img/a88e2462f5429060-480.webp" alt="STAG BAR 6IN1 180000 PUFFS — Cool Mint &amp; Cola Ice &amp; Coco Loco &amp; Watermelon Ice &amp; Cherry Cola &amp; Aloe Grape" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -225,7 +245,7 @@
       <span class="price">150 zł</span>
       <span class="price-old">180 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/stag-bar-6in1-180000-puffs/?utm_source=stagbar&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-stag-bar-6in1-180000-puffs-cool-mint-cola-ice-coco-loco-watermelon-ice-cherry-cola-aloe-grape" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/stag-bar-6in1-180000-puffs/?utm_source=stagbar&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-stag-bar-6in1-180000-puffs-cool-mint-cola-ice-coco-loco-watermelon-ice-cherry-cola-aloe-grape" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice cola fruit sweet">
   <a class="card-media" href="/produkt/stag-bar-6in1-180000-puffs-strawberry-ice-strawberry-kiwi-strawberry-banana-strawberry-watermelon-strawberry-colada-strawberry-candy/"><img src="/assets/img/a88e2462f5429060-480.webp" alt="STAG BAR 6IN1 180000 PUFFS — Strawberry Ice &amp; Strawberry Kiwi &amp; Strawberry Banana &amp; Strawberry Watermelon &amp; Strawberry Colada &amp; Strawberry Candy" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -236,7 +256,7 @@
       <span class="price">150 zł</span>
       <span class="price-old">180 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/stag-bar-6in1-180000-puffs/?utm_source=stagbar&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-stag-bar-6in1-180000-puffs-strawberry-ice-strawberry-kiwi-strawberry-banana-strawberry-watermelon-strawberry-colada-strawberry-candy" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/stag-bar-6in1-180000-puffs/?utm_source=stagbar&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-stag-bar-6in1-180000-puffs-strawberry-ice-strawberry-kiwi-strawberry-banana-strawberry-watermelon-strawberry-colada-strawberry-candy" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit sweet">
   <a class="card-media" href="/produkt/stag-bar-6in1-180000-puffs-triple-melon-sex-on-the-beach-peach-mango-pineapple-strawberry-raspberry-ice-mango-peach-watermelon-kiwi-passion-fruit-guava/"><img src="/assets/img/a88e2462f5429060-480.webp" alt="STAG BAR 6IN1 180000 PUFFS — Triple Melon &amp; Sex On The Beach &amp; Peach Mango Pineapple &amp; Strawberry Raspberry Ice &amp; Mango Peach Watermelon &amp; Kiwi Passion Fruit Guava" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -247,7 +267,7 @@
       <span class="price">150 zł</span>
       <span class="price-old">180 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/stag-bar-6in1-180000-puffs/?utm_source=stagbar&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-stag-bar-6in1-180000-puffs-triple-melon-sex-on-the-beach-peach-mango-pineapple-strawberry-raspberry-ice-mango-peach-watermelon-kiwi-passion-fruit-guava" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/stag-bar-6in1-180000-puffs/?utm_source=stagbar&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-stag-bar-6in1-180000-puffs-triple-melon-sex-on-the-beach-peach-mango-pineapple-strawberry-raspberry-ice-mango-peach-watermelon-kiwi-passion-fruit-guava" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit sweet">
   <a class="card-media" href="/produkt/stag-bar-6in1-180000-puffs-watermelon-ice-strawberry-watermelon-mango-peach-watermelon-watermelon-candy-raspberry-watermelon-watermelon-b-pop/"><img src="/assets/img/a88e2462f5429060-480.webp" alt="STAG BAR 6IN1 180000 PUFFS — Watermelon Ice &amp; Strawberry Watermelon &amp; Mango Peach Watermelon &amp; Watermelon Candy &amp; Raspberry Watermelon &amp; Watermelon B-pop" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -258,7 +278,7 @@
       <span class="price">150 zł</span>
       <span class="price-old">180 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/stag-bar-6in1-180000-puffs/?utm_source=stagbar&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-stag-bar-6in1-180000-puffs-watermelon-ice-strawberry-watermelon-mango-peach-watermelon-watermelon-candy-raspberry-watermelon-watermelon-b-pop" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/stag-bar-6in1-180000-puffs/?utm_source=stagbar&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-stag-bar-6in1-180000-puffs-watermelon-ice-strawberry-watermelon-mango-peach-watermelon-watermelon-candy-raspberry-watermelon-watermelon-b-pop" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article></div>
   </section><section class="block" id="kat-napoje" data-cat-sec="napoje">
@@ -272,7 +292,7 @@
       <span class="price">150 zł</span>
       <span class="price-old">180 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/stag-bar-6in1-180000-puffs/?utm_source=stagbar&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-stag-bar-6in1-180000-puffs-lemon-lime-strawberry-kiwi-dragon-fruit-banana-cherry-pineapple-papaya-coco-loco-sex-on-the-beach" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/stag-bar-6in1-180000-puffs/?utm_source=stagbar&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-stag-bar-6in1-180000-puffs-lemon-lime-strawberry-kiwi-dragon-fruit-banana-cherry-pineapple-papaya-coco-loco-sex-on-the-beach" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="napoje" data-fam="cola fruit sweet">
   <a class="card-media" href="/produkt/stag-bar-6in1-180000-puffs-love-66-strawberry-candy-strawberry-colada-mixed-berries-cherscake/"><img src="/assets/img/a88e2462f5429060-480.webp" alt="STAG BAR 6IN1 180000 PUFFS — Love 66 &amp; Strawberry Candy &amp; Strawberry Colada &amp; Mixed Berries &amp; Cherscake" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -283,7 +303,7 @@
       <span class="price">150 zł</span>
       <span class="price-old">180 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/stag-bar-6in1-180000-puffs/?utm_source=stagbar&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-stag-bar-6in1-180000-puffs-love-66-strawberry-candy-strawberry-colada-mixed-berries-cherscake" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/stag-bar-6in1-180000-puffs/?utm_source=stagbar&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-stag-bar-6in1-180000-puffs-love-66-strawberry-candy-strawberry-colada-mixed-berries-cherscake" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article></div>
   </section><section class="block alt" id="modele">
@@ -462,7 +482,7 @@
   <a class="article-link" href="/blog/66-love-dream-45k-vs-lux-60k-vs-stag-bar/">
     <span class="article-kicker">2026-10-14</span>
     <h3>66 love: DREAM 45K vs LUX 60K vs STAG BAR</h3>
-    <p>Love 66 to wariant z rodziny „sweet &amp; candy&#x27;, który dziś działa w trzech porównywanych formatach: HIFANCY DREAM 45000 PUFFS (70 zł), AiRMEZ LUX</p>
+    <p>Love 66 to wariant z rodziny „sweet &amp; candy&#x27;, który dziś działa w trzech porównywanych formatach: HIFANCY DREAM 45000 PUFFS (70 zł), AiRMEZ LUX 60000</p>
     <span class="article-more">Czytaj dalej <span aria-hidden="true">→</span></span>
   </a>
 </article><article class="article-card">
@@ -473,6 +493,13 @@
     <span class="article-more">Czytaj dalej <span aria-hidden="true">→</span></span>
   </a>
 </article><article class="article-card">
+  <a class="article-link" href="/blog/apple-peach-w-liczbach-lux-stag-bar-i-tornado/">
+    <span class="article-kicker">2026-10-11</span>
+    <h3>Apple peach w liczbach: LUX, STAG BAR i TORNADO</h3>
+    <p>Apple peach jako pojedynczy smak nie istnieje w polskim katalogu, i to jest zły news, ale dobry news w jednym zdaniu: potrzeba, którą ta fraza zwykle</p>
+    <span class="article-more">Czytaj dalej <span aria-hidden="true">→</span></span>
+  </a>
+</article><article class="article-card">
   <a class="article-link" href="/blog/aroma-king-stag-bar-lux-i-tornado-w-liczbach/">
     <span class="article-kicker">2026-10-18</span>
     <h3>Aroma King: STAG BAR, LUX i TORNADO w liczbach</h3>
@@ -480,24 +507,17 @@
     <span class="article-more">Czytaj dalej <span aria-hidden="true">→</span></span>
   </a>
 </article><article class="article-card">
-  <a class="article-link" href="/blog/buch-tornado-9k-lux-i-stag-bar-w-liczbach/">
-    <span class="article-kicker">2026-10-18</span>
-    <h3>Buch: TORNADO 9K, LUX i STAG BAR w liczbach</h3>
-    <p>Porównujemy trzy poziomy katalogu: wejściowy TORNADO 9K, środkowy LUX 60K i górny STAG BAR 180K.</p>
+  <a class="article-link" href="/blog/black-blueberry-lux-stag-bar-i-tyrant-w-liczbach/">
+    <span class="article-kicker">2026-10-14</span>
+    <h3>Black blueberry: LUX, STAG BAR i TYRANT w liczbach</h3>
+    <p>Szukasz black blueberry w pojedynczej jednorazówce? Pod kreską: STAG BAR ma najtańszy przeliczony koszt za tysiąc użytecznych puffs, TYRANT jest</p>
     <span class="article-more">Czytaj dalej <span aria-hidden="true">→</span></span>
   </a>
 </article><article class="article-card">
-  <a class="article-link" href="/blog/cherry-cola-ice-leopard-lux-i-stag-bar/">
+  <a class="article-link" href="/blog/box-jaki-liquid-wybrac-stag-bar-lux-i-tornado-w-liczbach/">
     <span class="article-kicker">2026-10-18</span>
-    <h3>Cherry cola ice: LEOPARD, LUX i STAG BAR</h3>
-    <p>Lista wariantów w katalogu mówi sama za siebie. Cherry cola to wiśnia i cola razem, bez lodu. Cola ice to cola z lodem, bez wiśni.</p>
-    <span class="article-more">Czytaj dalej <span aria-hidden="true">→</span></span>
-  </a>
-</article><article class="article-card">
-  <a class="article-link" href="/blog/cola-jednorazowka-dream-stag-bar-i-lux/">
-    <span class="article-kicker">2026-10-11</span>
-    <h3>Cola jednorazówka: DREAM, STAG BAR i LUX</h3>
-    <p>W dwa zdania: cola w cenniku ma trzy oblicza. Cola Ice ma dom w DREAM i w STAG BAR, Cherry Cola ma dom w STAG BAR i w LUX, a COCOLOCO ma dom tylko w</p>
+    <h3>Box jaki liquid wybrać: STAG BAR, LUX i TORNADO w liczbach</h3>
+    <p>Krótka odpowiedź: pytanie box jaki liquid wybrać nie jest pytaniem o jeden smak, jest pytaniem o trzy liczby.</p>
     <span class="article-more">Czytaj dalej <span aria-hidden="true">→</span></span>
   </a>
 </article></div></section><section class="block alt" id="faq"><div class="block-head"><div><span class="kicker sm">Masz pytania?</span><h2>Częste pytania</h2></div><a class="more" href="/faq/">Pełne FAQ →</a></div><div class="faq-list"><details><summary>Ile kosztują produkty Stagbar na vapepl.com?</summary><div class='faq-a'>Aktualne ceny Stagbar zaczynają się od 150 zł i sięgają 150 zł za sztukę. Przy zakupie 3+ sztuk rabat rośnie do −20% przy 15+ sztukach. Wszystkie zamówienia realizuje vapepl.com.</div></details><details><summary>Ile zaciągnięć oferuje Stagbar?</summary><div class='faq-a'>Liczba zaciągnięć zależy od modelu — od 180 000 do 180 000 puffs. Szczegóły każdej serii znajdziesz na stronie modelu.</div></details><details><summary>Jakie modele Stagbar są dostępne?</summary><div class='faq-a'>W sprzedaży dostępne są modele: STAG BAR 6IN1 180000 PUFFS. Każdy model występuje w wielu wariantach smakowych — pełną listę znajdziesz w zakładce Produkty.</div></details><details><summary>Czy rabaty ilościowe działają automatycznie?</summary><div class='faq-a'>Tak. Rabat nalicza się automatycznie w koszyku na vapepl.com: 3+ szt. −5%, 5+ szt. −8%, 10+ szt. −12%, 15+ szt. −20%.</div></details><details><summary>Czy strona sprzedaje produkty?</summary><div class='faq-a'>Nie. Ten serwis to przewodnik po produktach Stagbar — zamawianie i płatność odbywają się wyłącznie na vapepl.com.</div></details></div></section><section class="cta-panel">
@@ -506,7 +526,7 @@
     <p>Realizacja i płatność wyłącznie na <strong>vapepl.com</strong> — rabaty do −20% naliczają się automatycznie w koszyku.</p>
     <a class="btn-buy lg" href="https://vapepl.com/?utm_source=stagbar&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=cta-final" target="_blank" rel="noopener">Kup Stagbar na VapePL.COM</a>
   </div>
-</section><div class="sticky-cta"><span class="sticky-cta-info">Realizacja i płatność: <b>vapepl.com</b></span><a class="btn-buy" style="text-decoration:none" href="https://vapepl.com/?utm_source=stagbar&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=sticky" target="_blank" rel="noopener">Kup na VapePL.COM</a></div>
+</section>
 </main>
 <footer class="site-foot">
   <div class="wrap">
