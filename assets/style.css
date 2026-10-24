@@ -177,13 +177,14 @@ p { margin: 0.5em 0; }
   background: transparent; border: 1px solid var(--line-strong);
   border-radius: var(--radius); color: var(--text); cursor: pointer;
 }
-.nav-drawer-links { display: flex; flex-direction: column; }
+.nav-drawer-links { display: flex; flex-direction: column; margin-top: 12px; }
 .nav-drawer-links a {
   color: var(--text); font-weight: 600; font-size: 1.05rem;
   padding: 14px 4px; border-bottom: 1px solid var(--line);
 }
 .nav-drawer-links a:hover { color: var(--accent); text-decoration: none; }
-.nav-drawer-cta { margin-top: 20px; width: 100%; }
+/* CTA 置顶：更靠近拇指、转化路径最短；与头部标题栏之间留呼吸 */
+.nav-drawer-cta { margin-top: 14px; width: 100%; }
 body.nav-open { overflow: hidden; }
 
 @keyframes drawer-slide {
